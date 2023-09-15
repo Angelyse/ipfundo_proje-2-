@@ -1,56 +1,75 @@
+<?php include ('head2.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bootstrap Form with First Name</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap/jquery.min.js">
+    <link rel="stylesheet" href="./bootstrap/umd/popper.min.js">
+    <link rel="stylesheet" href="./bootstrap/js/bootstrap.min.js">
+    <!-- Include Bootstrap CSS -->
+    <style>
+        form{
+            background-color: #656E86;
+            margin-left: 350px;
+            margin-right: 450px;
+        }
+        .user-icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#user-icon-img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+}
+
+    </style>
 </head>
 <body>
-    <div class="row mt-5">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">fill this form</h5>
-                    <form action="insert.php" method="post" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="my-input">Names</label>
-                            <input id="my-input" class="form-control" type="text" name="names" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="my-input">USERNAME</label>
-                            <input id="my-input" class="form-control" type="text" name="username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="my-input">EMAIL</label>
-                            <input id="my-input" class="form-control" type="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="my-input">PASSWORD</label>
-                            <input id="my-input" class="form-control" type="password" name="password" required minlength="5">
-                        </div>
-                        <div class="form-group">
-                            <label for="my-input">CONFIRM</label>
-                            <input id="my-input" class="form-control" type="password" name="cpassword" required minlength="5">
-                        </div>
-                       
-
-                        <div class="card-footer d-flex justify-content-center"  >
-                        <input type="submit" value="CREATE" name="submit" class="btn btn-primary" style="width:20% ;">
-                        <input type="reset"value="cancel" class="btn btn-primary" style="width:20% ;">
-                    </div>
-                    </form>
-                </div>
-                
-                    
-                </div>
-            </div>
-
+    <center><p>CREATE YOUR ACCOUNT HERE</p></center>
+    <form method="get" action="">
+    <div class="user-icon">
+            <img src="user_icon.png" id="user-icon-img" alt="User Icon">
         </div>
-        <div class="col-sm-3"></div>
+    <label for=""> &nbsp &nbsp FULL NAME &nbsp &nbsp&nbsp &nbsp&nbsp;</label>
+        <input type="text" name="firstname"><br><br>
+       <label for=""> &nbsp &nbspPHONE NUMBER</label>
+        <input type="number" name="phonenumber"><br><br>
+       <label for=""> &nbsp &nbsp DATE OF BIRTH &nbsp</label> 
+        <input type="date" name="dateofbirth"><br><br>
 
-    </div>
+       <label for="">&nbsp &nbsp DISTRICT &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label> 
+        <select name="district" id="" value="">
+            <option>rwamagana</option>
+        </select><br><br>
+        
+    
+       <label for="sector"> &nbsp &nbsp SECTOR &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp &nbsp</label>
+    
+        <select id="" name="department">
+            <option value="IT">byimana</option>
+            <option value="karenge">karenge</option>
+            <option value="gasabo">gasabo</option>
+        </select><br><br>
+        
+    
+       <label for=""> &nbsp &nbsp CELL  &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label>
+        <input type="text" name="firstname"><br><br>
+        
+    
+       <label for=""> &nbsp &nbsp VILLAGE &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp &nbsp</label>
+        <input type="text" name="firstname"><br><br>
+        
+    
+       <label for=""> &nbsp &nbsp PASSWORD &nbsp &nbsp&nbsp &nbsp&nbsp </label>
+            <input type="password" name="password"><br><br>
+           <center> <input type="submit" value="CREATE ACCOUNT" style="background-color: #446557;";>&nbsp&nbsp
+           &nbsp&nbsp<input type="reset" value="CANCEL" style="background-color: #446557;">
+           </center>
+    </form>
 </body>
 </html>
